@@ -1,0 +1,38 @@
+{
+    "fondos": {
+        "fondo_menu": "./src/assets/img/gui/backgrounds/fondo_menu.jpeg",
+        "fondo_juego": "./src/assets/img/gui/backgrounds/fondo_juego.png",
+        "fondo_menu_juego": "./src/assets/img/gui/backgrounds/fondo_menu_juego.jpeg"
+    },
+    "fuentes": {
+        "fuente_titulo": "./src/assets/fonts/fuente_titulo.TTF",
+        "fuente_texto": "./src/assets/fonts/fuente_texto.ttf"
+    },
+    "musica": {
+        "menu_music": "./src/assets/sounds/menu_music.mp3",
+        "fight_music": "./src/assets/sounds/fight_music.mp3"
+    },
+    "sonidos": {
+        "walking": "./src/assets/sounds/walking.wav",
+        "jumping": "./src/assets/sounds/jumping.wav"
+    },
+    "botones": {
+        "green": "./src/assets/img/gui/buttons/button_green.png",
+        "yellow": "./src/assets/img/gui/buttons/button_yellow.png",
+        "gray": "./src/assets/img/gui/buttons/button_gray.png"
+    },
+    "sprites_knight": {
+        "idle": "./src/assets/img/characters/knight_sprite/idle.png",
+        "walk": "./src/assets/img/characters/knight_sprite/walk.png",
+        "attack": "./src/assets/img/characters/knight_sprite/attack.png",
+        "hurt": "./src/assets/img/characters/knight_sprite/hurt.png",
+        "death": "./src/assets/img/characters/knight_sprite/death.png"
+    },
+    "sprites_demon": {
+        "idle": "./src/assets/img/characters/demon_sprite/idle.png",
+        "walk": "./src/assets/img/characters/demon_sprite/walk.png",
+        "attack": "./src/assets/img/characters/demon_sprite/attack.png",
+        "hurt": "./src/assets/img/characters/demon_sprite/hurt.png",
+        "death": "./src/assets/img/characters/demon_sprite/death.png"
+    }
+}
