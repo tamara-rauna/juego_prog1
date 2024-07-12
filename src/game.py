@@ -57,6 +57,7 @@ def game_loop(SCREEN: pygame.Surface, flag_mute: bool):
 
     # Demon
     decision_demon = "demon_idle"
+    estado_demon = "idle"
     demon_alive = True
     demon_image_flip = False
     demon_velocity_y = 0
@@ -264,16 +265,15 @@ def game_loop(SCREEN: pygame.Surface, flag_mute: bool):
                 demon_velocity_y, gravedad_demon, demon_rect = gravedad(gravedad_demon, demon_velocity_y, gravity_demon, demon_rect)
 
                 decision_demon = demon_ia(health_demon, health_knight, demon_mira_a_knight, lejos_para_atacar, cerca_para_atacar, knight_attacking, knight_rect, demon_rect, demon_image_flip, knight_alive)
-                
                 match decision_demon:
                     case "demon_idle":
-                        frame_demon, ultima_actualizacion_demon, demon_image = actualizar_frame(current_time, ultima_actualizacion_demon, frames_speed["idle"], frame_demon,"idle", 2, demon_sprites)
-                        if current_time - ultima_actualizacion >= frames_speed["idle"]:
+                        estado_demon = "idle"
+                        if current_time - ultima_actualizacion_demon >= frames_speed["idle"]:
                             frame_demon += 1
-                            ultima_actualizacion = current_time
                             if frame_demon >= demon_data["frames"]["idle"]:
                                 frame_demon = 0
-                        demon_image = demon_sprites["idle"][frame_demon]
+                            demon_image = demon_sprites["idle"][frame_demon]
+                            ultima_actualizacion_demon = current_time
                     case "demon_turn_around":
                         demon_image_flip = True
                     case "demon_walk":
