@@ -84,7 +84,7 @@ def game_loop(SCREEN: pygame.Surface, flag_mute: bool):
     score_knight = 0
     ultima_actualizacion = pygame.time.get_ticks()
     ultima_actualizacion_demon = pygame.time.get_ticks()
-
+    countdown_round = 5
     frames_speed = {
         "idle": 1000,
         "walk": 100,
@@ -391,6 +391,8 @@ def game_loop(SCREEN: pygame.Surface, flag_mute: bool):
             decision_demon = "demon_idle"
             knight_rect.topleft = posicion_inicial_knight
             demon_rect.topleft = posicion_inicial_demon
+            health_knight = 100
+            health_demon = 100
             if countdown_round > 0:
                 mostrar_texto("Nuevo Round", (SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2), SCREEN, fuente_texto)
                 mostrar_texto(f"En {countdown_round} segundos...", (SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2 + 50), SCREEN, fuente_texto)
